@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0b14">
+  <title>TuneFlow — Audio Studio</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">♫</span><span>Tune<span>Flow</span></span></a>
+      <span class="top-pill"><i></i> AUDIO STUDIO</span>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> YOUR MEDIA, YOUR SOUND</div>
+      <h1>Every video has<br><span>a soundtrack.</span></h1>
+      <p class="intro">Turn videos you own or are authorized to process into audio files. Simple, quick, and yours to keep.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="section-head">
+        <div><div class="step">01 / SOURCE</div><h2>Bring your video</h2></div>
+        <span class="format-hint">MP4 · MOV · MKV · WEBM</span>
+      </div>
+
+      <label class="dropzone" id="dropzone" for="videoInput">
+        <input id="videoInput" type="file" accept="video/*,.mkv,.avi,.m4v">
+        <span class="upload-icon">↑</span>
+        <strong id="fileTitle">Drop a video here</strong>
+        <span id="fileSub">or <u>browse files</u> on your device</span>
+        <span class="file-limit">Up to 500 MB</span>
+      </label>
+
+      <div class="youtube-note">
+        <div class="yt-icon">▶</div>
+        <div class="yt-copy"><strong>Have a YouTube link?</strong><span>Open it on YouTube. For conversion, upload a video file you own or are permitted to download.</span></div>
+        <button id="openYoutube" class="text-button" type="button">Open link ↗</button>
+      </div>
+      <input id="youtubeUrl" class="url-input" type="url" placeholder="Paste a YouTube URL to open it">
+
+      <div class="section-head output-head">
+        <div><div class="step">02 / OUTPUT</div><h2>Choose your sound</h2></div>
+      </div>
+      <div class="format-grid">
+        <label class="format-card selected">
+          <input type="radio" name="format" value="mp3" checked>
+          <span class="format-symbol">♫</span><strong>MP3</strong><small>Compact · Easy to share</small>
+          <span class="radio-dot"></span>
+        </label>
+        <label class="format-card">
+          <input type="radio" name="format" value="wav">
+          <span class="format-symbol wave">〰</span><strong>WAV</strong><small>Uncompressed · High quality</small>
+          <span class="radio-dot"></span>
+        </label>
+      </div>
+
+      <button id="convertBtn" class="convert-btn" disabled><span>Extract audio</span><b>→</b></button>
+      <div id="status" class="status" role="status">Choose a video to get started.</div>
+      <div class="privacy"><span>◈</span> Files are processed by your TuneFlow server and removed after conversion.</div>
+    </section>
+
+    <footer><span>♫ TuneFlow</span><span>Made for the love of sound.</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
