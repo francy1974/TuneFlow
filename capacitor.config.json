@@ -1,0 +1,6 @@
+{
+  "appId": "com.tuneflow.app",
+  "appName": "TuneFlow",
+  "webDir": "public",
+  "bundledWebRuntime": false
+}
